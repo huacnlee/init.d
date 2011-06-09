@@ -6,4 +6,5 @@ You need install that software first, all then install in _/usr/local_ and the c
 
 h2. Include services and Application/Config files location
 
-	* Redis (/usr/local/redis, /usr/local/etc/redis.conf)
+* Redis (/usr/local/bin/redis, /usr/local/etc/redis.conf)
+* MongoDB (/usr/local/bin/mongod, /usr/local/etc/mongodb.conf)
