@@ -8,3 +8,4 @@ h2. Include services and Application/Config files location
 
 * Redis (/usr/local/bin/redis, /usr/local/etc/redis.conf)
 * MongoDB (/usr/local/bin/mongod, /usr/local/etc/mongodb.conf)
+* Nginx (/usr/local/bin/nginx, nginx.conf in /usr/local/nginx/conf)
