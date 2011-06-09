@@ -1,1 +1,9 @@
 This is my Ubuntu /etc/init.d/ scripts.
+
+h2. Notice
+
+You need install that software first, all then install in _/usr/local_ and the conf files in _/usr/local/etc/_.
+
+h2. Include services and Application/Config files location
+
+	* Redis (/usr/local/redis, /usr/local/etc/redis.conf)
