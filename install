@@ -8,7 +8,6 @@ sudo mkdir /var/log/mongodb
 sudo update-rc.d mongodb defaults
 
 sudo cp nginx /etc/init.d/
-sudo mkdir /var/run/nginx
 sudo update-rc.d nginx defaults
 
 sudo cp php-cgi /etc/init.d/
