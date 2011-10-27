@@ -1,5 +1,5 @@
 echo "install Ubuntu packages..."
-sudo apt-get install wget vim build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake libtool imagemagick 
+sudo apt-get install wget vim build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake libtool imagemagick libpcre3-dev 
 echo "---------------------------------------------------------------------------"
 echo "---------------------------------------------------------------------------"
 echo ""
@@ -18,7 +18,8 @@ echo ""
 echo "install Ruby 1.9.2 with GC patch"
 rvm pkg install readline
 rvm install 1.9.2-p290-patch
-rvm use 1.9.2 --default
+rvm use ruby-1.9.2-p290-patch --default
+gem install bundler
 echo "---------------------------------------------------------------------------"
 echo "---------------------------------------------------------------------------"
 echo ""
