@@ -1,0 +1,10 @@
+echo "install Ubuntu packages..."
+sudo apt-get install wget vim build-essential openssl libreadline6 libreadline6-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake libtool imagemagick 
+echo "---------------------------------------------------------------------------"
+echo "---------------------------------------------------------------------------"
+echo ""
+echo ""
+echo "install RVM"
+bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
+echo "---------------------------------------------------------------------------"
+echo "---------------------------------------------------------------------------"
