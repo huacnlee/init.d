@@ -4,6 +4,8 @@ curl -O http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz
 tar zxf node-v0.6.2.tar.gz
 cd node-v0.6.2
 ./configure
+rm node-v0.6.2.tar.gz
+rm -R node-v0.6.2
 make && sudo make install
 echo "Node.js install done."
 echo "------------------------------------------------------------------------"
