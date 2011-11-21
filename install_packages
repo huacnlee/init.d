@@ -6,21 +6,3 @@ echo ""
 echo ""
 
 
-echo "install RVM"
-bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-source ~/.bashrc
-echo "---------------------------------------------------------------------------"
-echo "---------------------------------------------------------------------------"
-echo ""
-echo ""
-
-
-echo "install Ruby 1.9.2 with GC patch"
-rvm pkg install readline
-rvm install 1.9.2-p290-patch
-rvm use ruby-1.9.2-p290-patch --default
-gem install bundler
-echo "---------------------------------------------------------------------------"
-echo "---------------------------------------------------------------------------"
-echo ""
-echo ""

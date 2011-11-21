@@ -1,0 +1,9 @@
+echo "------------------------------------------------------------------------"
+echo "Now install Node.js 0.6.2..."
+curl -O http://nodejs.org/dist/v0.6.2/node-v0.6.2.tar.gz
+tar zxf node-v0.6.2.tar.gz
+cd node-v0.6.2
+./configure
+make && sudo make install
+echo "Node.js install done."
+echo "------------------------------------------------------------------------"
