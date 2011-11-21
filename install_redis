@@ -1,0 +1,10 @@
+echo "-----------------------------------------------------------------------"
+echo "Now will install Redis 2.4.2..."
+curl -O http://redis.googlecode.com/files/redis-2.4.2.tar.gz
+tar zxf redis-2.4.2.tar.gz
+cd redis-2.4.2
+make && sudo make install
+rm -R redis-2.4.2
+rm redis-2.4.2.tar.gz
+echo "Redis 2.4.2 install successed."
+echo "-----------------------------------------------------------------------"
