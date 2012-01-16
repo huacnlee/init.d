@@ -1,12 +1,14 @@
-curl -O http://fastdl.mongodb.org/linux/mongodb-linux-i686-2.0.1.tgz
-tar zxf mongodb-linux-i686-2.0.1.tgz
+curl -O http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.0.2.tgz
+tar zxvf mongodb-linux-x86_64-2.0.2.tgz
 mkdir /usr/local/mongodb
-mv mongodb-linux-i686-2.0.1/bin /usr/local/mongodb/
-rm -R mongodb-linux-i686-2.0.1
+mv mongodb-linux-x86_64-2.0.2/bin /usr/local/mongodb/
+rm -R mongodb-linux-x86_64-2.0.2
 
 sudo cp mongodb /etc/init.d/
 sudo mkdir /var/lib/mongodb
 sudo mkdir /var/log/mongodb
+sudo mkdir /data
+sudo mkdir /data/db
 sudo update-rc.d mongodb defaults
-echo "Mongodb 2.0.1 install successed."
+echo "Mongodb 2.0.2 install successed."
 echo "-------------------------------------------------------------------"
