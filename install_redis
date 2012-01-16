@@ -1,12 +1,12 @@
 echo "-----------------------------------------------------------------------"
-echo "Now will install Redis 2.4.2..."
-curl -O http://redis.googlecode.com/files/redis-2.4.2.tar.gz
-tar zxf redis-2.4.2.tar.gz
-cd redis-2.4.2
+echo "Now will install Redis 2.4.6..."
+curl -O http://redis.googlecode.com/files/redis-2.4.6.tar.gz
+tar zxf redis-2.4.6.tar.gz
+cd redis-2.4.6
 make && sudo make install
-rm -R redis-2.4.2
-rm redis-2.4.2.tar.gz
-echo "Redis 2.4.2 install successed."
+rm -R redis-2.4.6
+rm redis-2.4.6.tar.gz
+echo "Redis 2.4.6 install successed."
 echo "-----------------------------------------------------------------------"
 echo "Now install service to /etc/init.d ..."
 sudo cp redis-server /etc/init.d/
