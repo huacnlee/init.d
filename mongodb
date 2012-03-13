@@ -1,56 +1,77 @@
-#! /bin/sh
+#!/bin/bash
+#
+# mongodb     Startup script for the mongodb server
+#
+# chkconfig: - 64 36
+# description: MongoDB Database Server
+#
+# processname: mongodb
+#
 
-### BEGIN INIT INFO
-# Provides:          mongodb
-# Required-Start:    $all
-# Required-Stop:     $all
-# Default-Start:     2 3 4 5
-# Default-Stop:      0 1 6
-# Short-Description: starts the mongodb data-store
-# Description:       starts mongodb using start-stop-daemon
-### END INIT INFO
+# Source function library
+. /etc/rc.d/init.d/functions
 
-PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
-DAEMON=/usr/local/bin/mongod
-DAEMON_OPTS="-f /usr/local/etc/mongodb.conf"
-PIDFILE=/var/run/mongodb/mongodb.pid
-LOGFILE=/var/log/mongodb/mongod.log
-NAME=mongodb
-DESC=mongodb
+if [ -f /etc/sysconfig/mongodb ]; then
+  . /etc/sysconfig/mongodb
+fi
 
-#test -x $DAEMON || exit 0
+prog="mongod"
+mongod="/usr/local/mongodb/bin/mongod"
+RETVAL=0
 
-#set -e
+start() {
+	echo -n $"Starting $prog: "
+	daemon $mongod "--fork --logpath /var/log/mongodb.log --logappend 2>&1 >>/var/log/mongodb.log"
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ] && touch /var/lock/subsys/$prog
+	return $RETVAL
+}
+
+stop() {
+	echo -n $"Stopping $prog: "
+	killproc $prog
+	RETVAL=$?
+	echo
+	[ $RETVAL -eq 0 ] && rm -f /var/lock/subsys/$prog
+	return $RETVAL
+}
+
+reload() {
+	echo -n $"Reloading $prog: "
+	killproc $prog -HUP
+	RETVAL=$?
+	echo
+	return $RETVAL
+}
 
 case "$1" in
-  start)
-        echo -n "Starting $DESC: "
-        start-stop-daemon --start --make-pidfile --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS >> $LOGFILE&
-        echo "$NAME."
-        ;;
-  stop)
-        echo -n "Stopping $DESC: "
-        start-stop-daemon --quiet --pidfile $PIFDILE --exec $DAEMON --stop
-        echo "$NAME."
-        ;;
-  restart|force-reload)
-        echo -n "Restarting $DESC: "
-        start-stop-daemon --quiet --pidfile $PIDFILE --exec $DAEMON --stop
-        sleep 1
-        start-stop-daemon --start --make-pidfile --pidfile $PIDFILE --exec $DAEMON -- $DAEMON_OPTS >> $LOGFILE&
-        echo "$NAME."
-        ;;
-  reload)
-      echo -n "Reloading $DESC configuration: "
-      start-stop-daemon --stop --signal HUP --quiet --pidfile $PIDFILE --exec $DAEMON
-      echo "$NAME."
-      ;;
-  *)
-        N=/etc/init.d/$NAME
-        echo "Usage: $N {start|stop|restart|force-reload}" >&2
-        exit 1
-        ;;
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		stop
+		start
+		;;
+	condrestart)
+		if [ -f /var/lock/subsys/$prog ]; then
+			stop
+			start
+		fi
+		;;
+	reload)
+		reload
+		;;
+	status)
+		status $mongod
+		RETVAL=$?
+		;;
+	*)
+		echo $"Usage: $0 {start|stop|restart|condrestart|reload|status}"
+		RETVAL=1
 esac
 
-exit 0
-
+exit $RETVAL
