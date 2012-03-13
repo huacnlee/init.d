@@ -10,5 +10,5 @@ sudo mkdir /var/log/mongodb
 sudo mkdir /data
 sudo mkdir /data/db
 sudo update-rc.d mongodb defaults
-echo "Mongodb 2.0.2 install successed."
+echo "Mongodb 2.0.3 install successed."
 echo "-------------------------------------------------------------------"
