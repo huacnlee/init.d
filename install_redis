@@ -5,9 +5,22 @@ tar zxf redis-2.4.8.tar.gz
 cd redis-2.4.8
 make && sudo make install
 rm -R redis-2.4.8
-rm redis-2.4.6.tar.gz
+rm redis-2.4.8.tar.gz
 echo "Redis 2.4.8 install successed."
 echo "-----------------------------------------------------------------------"
 echo "Now install service to /etc/init.d ..."
-sudo cp redis-server /etc/init.d/
-sudo update-rc.d redis-server defaults
+
+
+wget https://github.com/ijonas/dotfiles/raw/master/etc/init.d/redis-server
+wget https://github.com/ijonas/dotfiles/raw/master/etc/redis.conf
+sudo mv redis-server /etc/init.d/redis-server
+sudo chmod +x /etc/init.d/redis-server
+sudo mv redis.conf /etc/redis.conf
+
+sudo useradd redis
+sudo mkdir -p /var/lib/redis
+sudo mkdir -p /var/log/redis
+sudo chown redis.redis /var/lib/redis
+sudo chown redis.redis /var/log/redis
+
+sudo /etc/init.d/redis-server start
