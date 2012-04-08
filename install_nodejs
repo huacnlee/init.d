@@ -1,13 +1,11 @@
 echo "------------------------------------------------------------------------"
-echo "Now install Node.js 0.6.12..."
-curl -O http://nodejs.org/dist/v0.6.12/node-v0.6.12.tar.gz
-tar zxf node-v0.6.12.tar.gz
-cd node-v0.6.12
+echo "Now install Node.js 0.6.14..."
+curl -O http://nodejs.org/dist/v0.6.14/node-v0.6.14.tar.gz
+tar zxf node-v0.6.14.tar.gz
+cd node-v0.6.14
 ./configure
-rm node-v0.6.12.tar.gz
-rm -R node-v0.6.12
-echo "---node v0.6.12 bugfix---"
-curl -s https://github.com/joyent/node/commit/cc5cea3.diff | patch -p1
+rm node-v0.6.14.tar.gz
+rm -R node-v0.6.14
 make && sudo make install
 echo "Node.js install done."
 echo "------------------------------------------------------------------------"
