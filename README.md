@@ -1,3 +1,4 @@
+```
    ______              __           __
   /\__  _\          __/\ \__       /\ \
   \/_/\ \/     ___ /\_\ \ ,_\      \_\ \
@@ -5,11 +6,13 @@
       \_\ \__/\ \/\ \ \ \ \ \_  __/\ \L\ \
       /\_____\ \_\ \_\ \_\ \__\/\_\ \___,_\
       \/_____/\/_/\/_/\/_/\/__/\/_/\/__,_ /
+```
 
+Batch scripts for Ruby production environment install on Ubuntu Server.
 
-## Only work for Ubuntu Server 10.04
+## Requirements
 
-There is some quick install scripts for Ruby on Rails app deploy.
+* Ubuntu Server 10.04
 
 ## Usage
 
