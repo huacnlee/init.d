@@ -1,18 +1,21 @@
-echo "install RVM"
+echo "Install RVM"
+echo ""
 bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
 source ~/.bashrc
+echo ""
+echo -n "Replace Ruby Download url to Taobao Mirror..."
+sed -i 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
+echo "[Done]"
+echo ""
+echo ""
 echo "---------------------------------------------------------------------------"
 echo "---------------------------------------------------------------------------"
 echo ""
+echo "Now you can use rvm command to install ruby"
 echo ""
-
-
-echo "install Ruby 1.9.2 with GC patch"
-rvm pkg install readline
-rvm install 1.9.2-p290-patch
-rvm use ruby-1.9.2-p290-patch --default
-gem install bundler
-echo "---------------------------------------------------------------------------"
-echo "---------------------------------------------------------------------------"
+echo "rvm pkg install readline"
+echo "rvm install 1.9.3"
+echo "rvm use 1.9.3 --default"
+echo ""
 echo ""
 echo ""
