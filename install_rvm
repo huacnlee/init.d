@@ -14,6 +14,7 @@ echo "--------------------------------------------------------------------------
 echo ""
 echo "Now you can use rvm command to install ruby"
 echo ""
+echo "source ~/.bashrc"
 echo "rvm pkg install readline"
 echo "rvm install 1.9.3"
 echo "rvm use 1.9.3 --default"
