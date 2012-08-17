@@ -1,11 +1,11 @@
 echo "------------------------------------------------------------------------"
-echo "Now install Node.js 0.6.14..."
-curl -O http://nodejs.org/dist/v0.6.14/node-v0.6.14.tar.gz
-tar zxf node-v0.6.14.tar.gz
-cd node-v0.6.14
+echo "Now install Node.js 0.8.7..."
+curl -O http://nodejs.org/dist/v0.8.7/node-v0.8.7.tar.gz
+tar zxf node-v0.8.7.tar.gz
+cd node-v0.8.7
 ./configure
-rm node-v0.6.14.tar.gz
-rm -R node-v0.6.14
+rm node-v0.8.7.tar.gz
+rm -R node-v0.8.7
 make && sudo make install
 echo "Node.js install done."
 echo "------------------------------------------------------------------------"
