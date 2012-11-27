@@ -5,7 +5,7 @@ echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >>~/.bash
 source ~/.bash_profile
 echo ""
 echo -n "Replace Ruby Download url to Taobao Mirror..."
-sed 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' -i ~/.rvm/config/db
+sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db  
 echo "[Done]"
 echo ""
 echo ""
