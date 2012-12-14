@@ -1,0 +1,8 @@
+sudo yum install pcre pcre-devel
+curl -O http://nginx.org/download/nginx-1.2.6.tar.gz
+tar zxf nginx-1.2.6.tar.gz
+cd nginx-1.2.6
+./configure --with-http_ssl_module --with-http_realip_module --with-http_stub_status_module  --with-http_gzip_static_module --with-file-aio
+make
+sudo make install
+echo "Nginx has successed installed to /usr/local/nginx"
