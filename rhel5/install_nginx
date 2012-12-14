@@ -5,4 +5,11 @@ cd nginx-1.2.6
 ./configure --with-http_ssl_module --with-http_realip_module --with-http_stub_status_module  --with-http_gzip_static_module --with-file-aio
 make
 sudo make install
+sudo ln -sf /usr/local/nginx/sbin/nginx /usr/local/bin/
 echo "Nginx has successed installed to /usr/local/nginx"
+
+sudo cp nginx /etc/init.d/
+sudo mkdir /var/run/nginx
+sudo /sbin/chkconfig nginx on
+
+echo "Nginx has added to init.d and auto start on boot.\n Now you can use: \tsudo "
