@@ -1,11 +1,12 @@
 DIR=`pwd`
+VERSION='1.4.2'
 cd /tmp
-curl -O http://nginx.org/download/nginx-1.1.6.tar.gz
-tar zxf nginx-1.1.6.tar.gz
-cd nginx-1.1.6
+curl -O http://nginx.org/download/nginx-$VERSION.tar.gz
+tar zxf nginx-$VERSION.tar.gz
+cd nginx-$VERSION
 ./configure --with-http_ssl_module --with-http_realip_module --with-http_stub_status_module --with-http_gzip_static_module
 make && sudo make install
-rm -Rf /tmp/nginx-1.1.6/
+rm -Rf /tmp/nginx-$VERSION/
 cd $DIR
 sudo cp nginx /etc/init.d/
 sudo update-rc.d nginx defaults

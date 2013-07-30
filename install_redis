@@ -1,13 +1,14 @@
+VERSION="2.6.14"
 echo "-----------------------------------------------------------------------"
-echo "Now will install Redis 2.4.8..."
-curl -O http://redis.googlecode.com/files/redis-2.4.8.tar.gz
-tar zxf redis-2.4.8.tar.gz
-cd redis-2.4.8
+echo "Now will install Redis $VERSION..."
+curl -O http://redis.googlecode.com/files/redis-$VERSION.tar.gz
+tar zxf redis-$VERSION.tar.gz
+cd redis-$VERSION
 make && sudo make install
 cd ..
-sudo rm -R redis-2.4.8
-rm redis-2.4.8.tar.gz
-echo "Redis 2.4.8 install successed."
+sudo rm -R redis-$VERSION
+rm redis-$VERSION.tar.gz
+echo "Redis $VERSION install successed."
 echo "-----------------------------------------------------------------------"
 echo "Now install service to /etc/init.d ..."
 

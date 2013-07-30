@@ -1,12 +1,13 @@
+VERSION="1.4.22"
 echo "-----------------------------------------------------------------------"
-echo "Now will install Haproxy 1.4.22..."
-curl -O http://haproxy.1wt.eu/download/1.4/src/haproxy-1.4.22.tar.gz
-tar zxf haproxy-1.4.22.tar.gz
-cd haproxy-1.4.22
+echo "Now will install Haproxy $VERSION..."
+curl -O http://haproxy.1wt.eu/download/1.4/src/haproxy-$VERSION.tar.gz
+tar zxf haproxy-$VERSION.tar.gz
+cd haproxy-$VERSION
 make TARGET=linux26 && sudo make install
 cd ..
-sudo rm -R haproxy-1.4.22
-rm haproxy-1.4.22.tar.gz
+sudo rm -R haproxy-$VERSION
+rm haproxy-$VERSION.tar.gz
 echo "Haproxy install successed."
 echo "-----------------------------------------------------------------------"
 echo "Now install service to /etc/init.d ..."

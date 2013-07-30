@@ -1,11 +1,11 @@
 echo "Install RVM"
 echo ""
-bash < <(curl -s https://raw.github.com/wayneeseguin/rvm/master/binscripts/rvm-installer)
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >>~/.bash_profile
-source ~/.bash_profile
+\curl -L https://get.rvm.io | bash -s stable
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >>~/.bashrc
+source ~/.bashrc
 echo ""
 echo -n "Replace Ruby Download url to Taobao Mirror..."
-sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db  
+sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
 echo "[Done]"
 echo ""
 echo ""
@@ -16,8 +16,8 @@ echo "Now you can use rvm command to install ruby"
 echo ""
 echo "source ~/.bashrc"
 echo "rvm pkg install readline"
-echo "rvm install 1.9.3"
-echo "rvm use 1.9.3 --default"
+echo "rvm install 2.0.0"
+echo "rvm use 2.0.0 --default"
 echo ""
 echo ""
 echo ""

@@ -1,11 +1,12 @@
+VERSION="0.10.15"
 echo "------------------------------------------------------------------------"
-echo "Now install Node.js 0.6.14..."
-curl -O http://nodejs.org/dist/v0.6.14/node-v0.6.14.tar.gz
-tar zxf node-v0.6.14.tar.gz
-cd node-v0.6.14
+echo "Now install Node.js $VERSION..."
+curl -O http://nodejs.org/dist/v$VERSION/node-v$VERSION.tar.gz
+tar zxf node-v$VERSION.tar.gz
+cd node-v$VERSION
 ./configure
-rm node-v0.6.14.tar.gz
-rm -R node-v0.6.14
+rm node-v$VERSION.tar.gz
+rm -R node-v$VERSION
 make && sudo make install
 echo "Node.js install done."
 echo "------------------------------------------------------------------------"

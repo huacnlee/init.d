@@ -1,16 +1,4 @@
-curl -O http://fastdl.mongodb.org/linux/mongodb-linux-x86_64-2.0.3.tgz
-tar zxvf mongodb-linux-x86_64-2.0.3.tgz
-sudo mkdir /usr/local/mongodb
-sudo mv mongodb-linux-x86_64-2.0.3/bin /usr/local/mongodb/
-sudo ln -s /usr/local/mongodb/bin/mongo* /usr/local/bin/
-rm -R mongodb-linux-x86_64-2.0.3
-
-sudo useradd mongodb
-sudo cp mongodb /etc/init.d/
-sudo mkdir /var/lib/mongodb
-sudo chown -R mongodb /var/lib/mongodb
-sudo mkdir /var/log/mongodb
-sudo chown -R mongodb /var/log/mongodb
-sudo update-rc.d mongodb defaults
-echo "Mongodb 2.0.3 install successed."
-echo "-------------------------------------------------------------------"
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee /etc/apt/sources.list.d/10gen.list
+sudo apt-get update
+sudo apt-get install mongodb-10gen

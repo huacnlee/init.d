@@ -12,7 +12,7 @@ Batch scripts for Ruby production environment install on Ubuntu Server.
 
 ## Requirements
 
-* Ubuntu Server 10.04
+* Ubuntu Server 12.04
 
 ## Usage
 
