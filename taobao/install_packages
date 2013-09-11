@@ -2,9 +2,8 @@ sudo yum -y install \
     gcc gcc-c++ autoconf libjpeg-devel libpng-devel \
     freetype freetype-devel libxml2-devel zlib-devel \
     glibc-devel glib2-devel bzip2-devel \
-    ncurses-devel curl-devel e2fsprogs-devel \
-    krb5-devel libidn-devel \
+    ncurses-devel e2fsprogs-devel \
+    krb5-devel libidn-devel openssl \
     openldap-devel openldap-clients openldap-servers \
     libmcrypt-devel libxslt-devel libtiff-devel git nodejs \
 || (echo "requirements installing failed!" && exit)
-

@@ -4,6 +4,7 @@ source ~/.bashrc
 
 sed -i 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
 
+rvm pkg install readline
 rvm install 2.0.0 && rvm use 2.0.0 --default
 
 gem sources --remove https://rubygems.org/
