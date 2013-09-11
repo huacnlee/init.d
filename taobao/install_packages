@@ -5,5 +5,5 @@ sudo yum -y install \
     ncurses-devel e2fsprogs-devel \
     krb5-devel libidn-devel openssl \
     openldap-devel openldap-clients openldap-servers \
-    libmcrypt-devel libxslt-devel libtiff-devel mysql-devel git nodejs \
+    libmcrypt-devel libxslt-devel libtiff-devel mysql-devel git taobao-nodejs-yunti \
 || (echo "requirements installing failed!" && exit)
