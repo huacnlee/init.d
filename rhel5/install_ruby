@@ -1,0 +1,15 @@
+\curl -L https://get.rvm.io | bash -s stable
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >> ~/.bashrc
+source ~/.bashrc
+
+sed -i 's!ftp.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
+
+rvm install 2.0.0 && rvm use 2.0.0 --default
+
+gem sources --remove https://rubygems.org/
+gem sources -a http://ruby.taobao.org/
+
+gem install bundler
+    
+echo 'install: --no-rdoc --no-ri' >> ~/.gemrc
+echo 'update:  --no-rdoc --no-ri' >> ~/.gemrc
