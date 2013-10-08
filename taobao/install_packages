@@ -7,3 +7,5 @@ sudo yum -y install \
     openldap-devel openldap-clients openldap-servers \
     libmcrypt-devel libxslt-devel libtiff-devel mysql-devel git taobao-nodejs-yunti \
 || (echo "requirements installing failed!" && exit)
+
+curl https://gist.github.com/huacnlee/505659/raw >> ~/.vimrc
