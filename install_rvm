@@ -5,7 +5,7 @@ echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"' >>~/.bash
 source ~/.bashrc
 echo ""
 echo -n "Replace Ruby Download url to Taobao Mirror..."
-sed -i -e 's/ftp\.ruby-lang\.org\/pub\/ruby/ruby\.taobao\.org\/mirrors\/ruby/g' ~/.rvm/config/db
+sed -i 's!cache.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
 echo "[Done]"
 echo ""
 echo ""
@@ -16,8 +16,8 @@ echo "Now you can use rvm command to install ruby"
 echo ""
 echo "source ~/.bashrc"
 echo "rvm pkg install readline"
-echo "rvm install 2.0.0"
-echo "rvm use 2.0.0 --default"
+echo "rvm install 2.1.0"
+echo "rvm use 2.1.0 --default"
 echo ""
 echo ""
 echo ""
