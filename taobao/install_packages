@@ -1,4 +1,4 @@
-sudo yum -y install \
+sudo yum -y install -b current \
     gcc gcc-c++ autoconf libjpeg-devel libpng-devel \
     freetype freetype-devel libxml2-devel zlib-devel \
     glibc-devel glib2-devel bzip2-devel \
