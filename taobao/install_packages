@@ -3,7 +3,7 @@ sudo yum -y install -b current \
     freetype freetype-devel libxml2-devel zlib-devel libyaml-devel libffi-devel libevent-devel \
     glibc-devel glib2-devel bzip2-devel \
     ncurses-devel e2fsprogs-devel \
-    krb5-devel libidn-devel openssl \
+    krb5-devel libidn-devel openssl pcre-devel\
     openldap-devel openldap-clients openldap-servers \
     libmcrypt-devel libxslt-devel libtiff-devel mysql-devel git taobao-nodejs-yunti \
 || (echo "requirements installing failed!" && exit)
