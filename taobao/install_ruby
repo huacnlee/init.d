@@ -4,11 +4,11 @@ source ~/.bashrc
 
 sed -i 's!cache.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
 
-rvm pkg install readline
-rvm install 2.1.0 && rvm use 2.1.0 --default
+rvm autolibs rvm_pkg
+rvm install 2.1.1 && rvm use 2.1.1 --default
 
 gem sources --remove https://rubygems.org/
-gem sources -a http://ruby.taobao.org/
+gem sources -a https://ruby.taobao.org/
 
 gem install bundler
     
