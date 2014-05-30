@@ -1,6 +1,6 @@
 sudo yum -y install -b current \
     gcc gcc-c++ autoconf libjpeg-devel libpng-devel \
-    freetype freetype-devel libxml2-devel zlib-devel libyaml-devel libffi-devel libevent-devel \
+    freetype freetype-devel libxml2-devel zlib-devel libffi-devel libevent-devel \
     glibc-devel glib2-devel bzip2-devel \
     ncurses-devel e2fsprogs-devel \
     krb5-devel libidn-devel openssl pcre-devel\
@@ -8,5 +8,5 @@ sudo yum -y install -b current \
     libmcrypt-devel libxslt-devel libtiff-devel mysql-devel git taobao-nodejs-yunti \
     t_libeasy-devel t-hsf-hsfcpp \
 || (echo "requirements installing failed!" && exit)
-
+sudo /sbin/ldconfig
 curl https://gist.github.com/huacnlee/505659/raw >> ~/.vimrc

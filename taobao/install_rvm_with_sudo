@@ -1,0 +1,16 @@
+wget https://get.rvm.io -no-check-certificate
+chmod +x rvm-installer
+sudo ./rvm-installer
+source /etc/profile
+
+sudo sed -i 's!cache.ruby-lang.org/pub/ruby!ruby.taobao.org/mirrors/ruby!' $rvm_path/config/db
+
+sudo rvm pkg install readline libyaml
+sudo rvm install 2.1.1
+rvm use ruby-2.1.2
+sudo rvm alias create default ruby-2.1.2
+
+sudo gem sources --remove https://rubygems.org/
+sudo gem sources -a https://ruby.taobao.org/
+
+sudo gem install bundler
