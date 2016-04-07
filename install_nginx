@@ -1,12 +1,3 @@
-DIR=`pwd`
-VERSION='1.4.4'
-cd /tmp
-curl -O http://nginx.org/download/nginx-$VERSION.tar.gz
-tar zxf nginx-$VERSION.tar.gz
-cd nginx-$VERSION
-./configure --with-http_ssl_module --with-http_realip_module --with-http_stub_status_module --with-http_gzip_static_module  --with-http_image_filter_module
-make && sudo make install
-rm -Rf /tmp/nginx-$VERSION/
-cd $DIR
-sudo cp nginx /etc/init.d/
-sudo update-rc.d nginx defaults
+sudo add-apt-repository ppa:nginx/stable
+sudo apt-get update
+sudo apt-get install -y nginx

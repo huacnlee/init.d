@@ -1,6 +1,0 @@
-sudo yum install tengine -y
-sudo ln -sf /usr/alibaba/tengine/sbin/nginx /usr/local/bin/
-sudo cp status.html /usr/alibaba/tengine/html/
-sudo ln -sf nginx /etc/init.d/
-sudo chmod +x /etc/init.d/nginx
-sudo /sbin/chkconfig nginx on

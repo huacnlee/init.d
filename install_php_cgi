@@ -1,5 +1,0 @@
-sudo apt-get install php5
-sudo cp php-cgi /etc/init.d/
-sudo update-rc.d php-cgi defaults
-
-
