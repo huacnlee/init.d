@@ -34,8 +34,10 @@ sudo apt-get install -y curl
 
 ```bash
 \curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | sh
-rvm list
-ruby -v
+source ~/.rvm/scripts/rvm
+rvm pkg install readline openssl
+rvm install 2.3.0
+rvm use 2.3.0 --default
 ```
 
 ### Install MongoDB
