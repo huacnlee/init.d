@@ -12,7 +12,7 @@ Batch scripts for Ruby production environment install on Ubuntu Server.
 
 ## Requirements
 
-* Ubuntu Server 12.04
+* Ubuntu Server 14.04
 
 ## Usage
 
@@ -29,26 +29,22 @@ Install packages first
 $ \curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_packages | sh
 ```
 
+### Install RVM + Ruby
+
+```bash
+$ \curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | sh
+$ rvm list
+$ ruby -v
+```
+
 ### Install MongoDB
 
 ```bash
-$ ./install_mongodb
+$ \curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongodb | sh
 ```
 
 ### Install Redis
 
 ```bash
-$ ./install_redis
-```
-
-### Install Node.JS
-
-```bash
-$ ./install_nodejs
-```
-
-### Install Ruby by RVM
-
-```bash
-$ ./install_rvm
+$ \curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | sh
 ```
