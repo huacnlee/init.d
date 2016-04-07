@@ -38,6 +38,8 @@ source ~/.rvm/scripts/rvm
 rvm pkg install readline openssl
 rvm install 2.3.0
 rvm use 2.3.0 --default
+gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+gem install bundler
 ```
 
 ### Install MongoDB
