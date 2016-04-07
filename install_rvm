@@ -2,7 +2,7 @@ echo "Install RVM"
 echo ""
 command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
 \curl -L https://get.rvm.io | bash -s stable
-source ~/.rvm/scripts/rvm
+. ~/.rvm/scripts/rvm
 echo "[Done]"
 echo ""
 echo ""
