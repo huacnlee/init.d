@@ -10,6 +10,8 @@
 
 Batch scripts for Ruby production environment install on Ubuntu Server.
 
+[![wercker status](https://app.wercker.com/status/2dd2ff58518cae2dd75e4556e6d931c5/s/master "wercker status")](https://app.wercker.com/project/bykey/2dd2ff58518cae2dd75e4556e6d931c5)
+
 ## Requirements
 
 * Ubuntu Server 14.04
