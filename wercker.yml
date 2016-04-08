@@ -7,8 +7,14 @@ build:
       name: install packages
       code: ./install_packages
     - script:
-      name: install nginx
-      code: ./install_nginx
-    - script:
       name: install rvm
-      code: ./install_rvm
+      code: |
+        ./install_rvm
+        rvm -v
+        ruby -v
+        gem -v
+    - script:
+      name: install nginx
+      code: |
+        ./install_nginx
+        nginx -v
