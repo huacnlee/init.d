@@ -1,0 +1,14 @@
+box: ubuntu:14.04
+build:
+  steps:
+    - install-packages:
+      packages: curl
+    - script:
+      name: install packages
+      code: ./install_packages
+    - script:
+      name: install nginx
+      code: ./install_nginx
+    - script:
+      name: install rvm
+      code: ./install_rvm
