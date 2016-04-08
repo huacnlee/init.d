@@ -21,19 +21,19 @@ Install packages first
 ```bash
 sudo apt-get update
 sudo apt-get install -y curl
-\curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_packages | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_packages | sh
 ```
 
 ### Install Nginx
 
 ```bash
-\curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_nginx | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_nginx | sh
 ```
 
 ### Install RVM + Ruby
 
 ```bash
-\curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | sh
 source ~/.rvm/scripts/rvm
 rvm pkg install readline openssl
 rvm install 2.3.0
@@ -45,11 +45,11 @@ gem install bundler
 ### Install MongoDB
 
 ```bash
-\curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongodb | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongodb | sh
 ```
 
 ### Install Redis
 
 ```bash
-\curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | sh
 ```
