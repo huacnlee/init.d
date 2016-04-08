@@ -7,4 +7,6 @@ command source ~/.bashrc
 rvm pkg install readline openssl
 rvm install 2.3.0
 rvm use 2.3.0 --default
+rvm -v
+ruby -v
 echo "--------------------------- Install Successed -----------------------------"
