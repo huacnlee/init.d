@@ -51,3 +51,10 @@ curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongo
 ```bash
 curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | bash
 ```
+
+### Install ElasticSearch
+
+```bash
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/elasticsearch | bash
+sudo service elasticsearch status
+```
