@@ -23,23 +23,19 @@ Install packages first
 ```bash
 sudo apt-get update
 sudo apt-get install -y curl
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_packages | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_packages | bash
 ```
 
 ### Install Nginx
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_nginx | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_nginx | bash
 ```
 
 ### Install RVM + Ruby
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | sh
-source ~/.rvm/scripts/rvm
-rvm pkg install readline openssl
-rvm install 2.3.0
-rvm use 2.3.0 --default
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | bash
 gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 gem install bundler
 ```
@@ -47,11 +43,11 @@ gem install bundler
 ### Install MongoDB
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongodb | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongodb | bash
 ```
 
 ### Install Redis
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | sh
+curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | bash
 ```

@@ -1,19 +1,12 @@
 echo "Install RVM"
-echo ""
-command curl -sSL https://rvm.io/mpapis.asc | gpg --import -
-\curl -L https://get.rvm.io | bash -s stable
-echo "[Done]"
-echo ""
-echo ""
 echo "---------------------------------------------------------------------------"
-echo "---------------------------------------------------------------------------"
-echo ""
-echo "Now you can use rvm command to install ruby"
-echo ""
-echo "source ~/.bashrc"
-echo "rvm pkg install readline openssl"
-echo "rvm install 2.3.0"
-echo "rvm use 2.3.0 --default"
-echo ""
-echo ""
-echo ""
+command gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+command curl -L https://get.rvm.io | bash -s stable
+command source /etc/profile.d/rvm.sh
+command source ~/.bashrc
+rvm requirements
+rvm install 2.3.0
+rvm use 2.3.0 --default
+rvm -v
+ruby -v
+echo "--------------------------- Install Successed -----------------------------"
