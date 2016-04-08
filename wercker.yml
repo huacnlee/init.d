@@ -12,3 +12,6 @@ build:
     - script:
       name: Nginx
       code: ./install_nginx
+    - script:
+      name: ElasticSearch
+      code: ./elasticsearch
