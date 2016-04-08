@@ -10,7 +10,6 @@ build:
       name: Ruby
       code: |
         ./install_rvm
-        rvm -v
         ruby -v
         gem -v
     - script:
