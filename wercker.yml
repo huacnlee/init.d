@@ -4,17 +4,17 @@ build:
     - install-packages:
       packages: curl
     - script:
-      name: install packages
+      name: Base Packages
       code: ./install_packages
     - script:
-      name: install rvm
+      name: Ruby
       code: |
         ./install_rvm
         rvm -v
         ruby -v
         gem -v
     - script:
-      name: install nginx
+      name: Nginx
       code: |
         ./install_nginx
         nginx -v
