@@ -23,19 +23,19 @@ Install packages first
 ```bash
 sudo apt-get update
 sudo apt-get install -y curl
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_packages | bash
+curl -sSL https://git.io/vVHhe | bash
 ```
 
 ### Install Nginx
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_nginx | bash
+curl -sSL https://git.io/vVHhf | bash
 ```
 
 ### Install RVM + Ruby
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_rvm | bash
+curl -sSL https://git.io/vVHhJ | bash
 gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
 gem install bundler
 ```
@@ -43,18 +43,18 @@ gem install bundler
 ### Install MongoDB
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_mongodb | bash
+curl -sSL https://git.io/vVHhT | bash
 ```
 
 ### Install Redis
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/install_redis | bash
+curl -sSL https://git.io/vVHhk | bash
 ```
 
 ### Install ElasticSearch
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/huacnlee/init.d/master/elasticsearch | bash
+curl -sSL https://git.io/vVHhm | bash
 sudo service elasticsearch status
 ```
