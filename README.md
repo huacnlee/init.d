@@ -36,8 +36,12 @@ curl -sSL https://git.io/vVHhf | bash
 
 ```bash
 curl -sSL https://git.io/vVHhJ | bash
-gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
-gem install bundler
+```
+
+Use Ruby China mirror site for RubyGems and Ruby:
+
+```
+MIRROR=1 curl -sSL https://git.io/vVHhJ | bash
 ```
 
 ### Install MongoDB

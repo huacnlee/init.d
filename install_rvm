@@ -4,9 +4,21 @@ command gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A17031
 command curl -L https://get.rvm.io | bash -s stable
 command source /etc/profile.d/rvm.sh
 command source ~/.bashrc
+
+if [ MIRROR = '1' ]; then
+sed -i -e 's/cache\.ruby-lang\.org\//cache\.ruby-china\.org\//g' ~/.rvm/config/db
+fi
+
 rvm requirements
 rvm install 2.3.0
 rvm use 2.3.0 --default
 rvm -v
 ruby -v
+
+if [ MIRROR = '1' ]; then
+gem sources --add https://gems.ruby-china.org/ --remove https://rubygems.org/
+fi
+
+gem install bundler
+bundle -v
 echo "--------------------------- Install Successed -----------------------------"
