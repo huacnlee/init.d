@@ -6,7 +6,7 @@ command source /etc/profile.d/rvm.sh
 command source ~/.bashrc
 
 if [ MIRROR = '1' ]; then
-echo "ruby_url=http://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db
+echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db
 fi
 
 rvm requirements
