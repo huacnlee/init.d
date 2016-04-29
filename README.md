@@ -28,6 +28,8 @@ curl -sSL https://git.io/vVHhe | bash
 
 ### Install Nginx
 
+Nginx [official package](http://nginx.org/packages/ubuntu/)
+
 ```bash
 curl -sSL https://git.io/vVHhf | bash
 ```
