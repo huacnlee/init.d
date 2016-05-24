@@ -4,7 +4,7 @@ command gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A17031
 command curl -L https://get.rvm.io | bash -s stable
 if [ whoami = 'root']; then
 command source /etc/profile
-elif
+else
 command source ~/.rvm/scripts/rvm
 fi
 
