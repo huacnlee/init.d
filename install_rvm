@@ -2,15 +2,14 @@ echo "Install RVM"
 echo "---------------------------------------------------------------------------"
 command gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 command curl -L https://get.rvm.io | bash -s stable
-command source /etc/profile.d/rvm.sh
-command source ~/.bashrc
+command source ~/.rvm/scripts/rvm
 
 if [ MIRROR = '1' ]; then
 echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db
 fi
 
 rvm requirements
-rvm install 2.3.1
+rvm install 2.3.1 --disable-binary
 rvm use 2.3.1 --default
 rvm -v
 ruby -v
