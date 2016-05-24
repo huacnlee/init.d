@@ -2,7 +2,11 @@ echo "Install RVM"
 echo "---------------------------------------------------------------------------"
 command gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 command curl -L https://get.rvm.io | bash -s stable
+if [ whoami = 'root']; then
+command source /etc/profile
+elif
 command source ~/.rvm/scripts/rvm
+fi
 
 if [ MIRROR = '1' ]; then
 echo "ruby_url=https://cache.ruby-china.org/pub/ruby" > ~/.rvm/user/db
