@@ -1,6 +1,6 @@
 echo "install Ubuntu packages..."
 sudo apt-get update
-sudo apt-get install -y software-properties-common wget vim build-essential openssl libreadline6 libreadline6-dev libsqlite3-dev libmysqlclient-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake cmake libtool imagemagick libmagickwand-dev libpcre3-dev language-pack-zh-hans libevent-dev libgmp-dev libgmp3-dev redis-tools nodejs htop
+sudo apt-get install -y software-properties-common wget vim build-essential openssl libreadline6 libreadline6-dev libsqlite3-dev libmysqlclient-dev libpq-dev curl git-core zlib1g zlib1g-dev libssl-dev libyaml-dev libxml2-dev libxslt-dev autoconf automake cmake libtool imagemagick libmagickwand-dev libpcre3-dev language-pack-zh-hans libevent-dev libgmp-dev libgmp3-dev redis-tools nodejs htop
 echo "---------------------------------------------------------------------------"
 echo "---------------------------------------------------------------------------"
 echo ""
