@@ -64,3 +64,10 @@ curl -sSL https://git.io/vVHhk | bash
 curl -sSL https://git.io/vVHhm | bash
 sudo service elasticsearch status
 ```
+
+## Install Docker
+
+```bash
+curl -sSL https://git.io/vPypp | bash
+sudo docker info
+```
