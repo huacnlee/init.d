@@ -1,3 +1,4 @@
+#!/bin/bash -eux
 echo "-------------------- ElasticSearch Install ... -------------------"
 wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
 sudo apt-get install apt-transport-https

@@ -1,3 +1,4 @@
+#!/bin/bash -eux
 VERSION="1.4.22"
 echo "-----------------------------------------------------------------------"
 echo "Now will install Haproxy $VERSION..."

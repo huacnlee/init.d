@@ -1,3 +1,4 @@
+#!/bin/bash -eux
 curl -O http://nginx.org/keys/nginx_signing.key
 sudo apt-key add nginx_signing.key
 sudo bash -c 'echo "deb http://nginx.org/packages/ubuntu/ $(lsb_release -cs) nginx
