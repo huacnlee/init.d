@@ -18,3 +18,6 @@ build:
     - script:
       name: Docker
       code: ./install_docker
+     - script:
+      name: Docker on AWS EC2
+      code: ./install-docker-aws
