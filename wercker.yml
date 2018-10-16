@@ -7,9 +7,6 @@ build:
       name: Base Packages
       code: ./install_packages
     - script:
-      name: Ruby
-      code: ./install_rvm
-    - script:
       name: Nginx
       code: ./install_nginx
     - script:
